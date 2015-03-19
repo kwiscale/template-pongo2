@@ -1,6 +1,6 @@
 # Kwiscale addon to use Pongo2 template engine
 
-That addon can be used with [Kwiscale](https://github.com/kwiscale/framework) to use Pongo2 template engine.
+That addon can be used with [Kwiscale](https://github.com/kwiscale/framework) to use [Pongo2](https://github.com/flosch/pongo2) template engine.
 
 # How to
 
