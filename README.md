@@ -27,7 +27,7 @@ Then, in configuration:
 
 ```go
 app := kwiscale.NewApp(&kwiscale.Config{
-    TemplateEngine : "pongo2"
+    TemplateEngine : "pongo2",
 })
 //...
 ``` 
