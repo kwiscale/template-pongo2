@@ -26,15 +26,26 @@ func (p *PongoTemplateEngine) Render(w io.Writer, path string, ctx interface{}) 
 	path = filepath.Join(p.tpldir, path)
 	tpl := pongo2.Must(pongo2.FromFile(path))
 
-	// encode context
-	jsonin, err := json.Marshal(ctx)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	// decode to map to pongo2.Context
 	var pctx pongo2.Context
-	json.Unmarshal(jsonin, &pctx)
+
+	// We try to keep the correct context structure
+	switch ctx := ctx.(type) {
+	case map[string]interface{}:
+		for k, v := range ctx {
+			pctx[k] = v
+		}
+	default:
+		// but if context is not regular...
+		// encode context...
+		// TODO: fix the data type lose
+		jsonin, err := json.Marshal(ctx)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		// decode to map to pongo2.Context
+		json.Unmarshal(jsonin, &pctx)
+	}
 
 	return tpl.ExecuteWriter(pctx, w)
 }
