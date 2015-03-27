@@ -20,8 +20,8 @@ Then in you application:
 ```go
 
 import (
-    "gopkg.in/kwiscale/framework.v1"
-    _ "gopkg.in/kwiscale/template-pongo2.v1"
+    "gopkg.in/kwiscale/framework.v0"
+    _ "gopkg.in/kwiscale/template-pongo2.v0"
 )
 
 ```
@@ -33,6 +33,7 @@ Then, in configuration:
 ```go
 app := kwiscale.NewApp(&kwiscale.Config{
     TemplateEngine : "pongo2",
+    TeplateDir : "./templates",
 })
 //...
 ``` 
