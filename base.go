@@ -8,7 +8,7 @@ import (
 
 	"github.com/flosch/pongo2"
 	_ "github.com/flosch/pongo2-addons"
-	"github.com/metal3d/kwiscale"
+	"gopkg.in/kwiscale/framework.v0"
 )
 
 // Init is used to register Pongo2 template engine to Kwiscale as name "pongo2".
