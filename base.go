@@ -1,7 +1,6 @@
 package kwpongo2
 
 import (
-	"encoding/json"
 	"io"
 	"log"
 	"path/filepath"
@@ -27,16 +26,16 @@ func (p *PongoTemplateEngine) Render(w io.Writer, path string, ctx interface{}) 
 	tpl := pongo2.Must(pongo2.FromFile(path))
 
 	// encode context
-	jsonin, err := json.Marshal(ctx)
-	if err != nil {
-		log.Fatal(err)
-	}
+	/*	jsonin, err := json.Marshal(ctx)
+		if err != nil {
+			log.Fatal(err)
+		}
 
-	// decode to map to pongo2.Context
-	var pctx pongo2.Context
-	json.Unmarshal(jsonin, &pctx)
-
-	return tpl.ExecuteWriter(pctx, w)
+		// decode to map to pongo2.Context
+		var pctx pongo2.Context
+		json.Unmarshal(jsonin, &pctx)
+	*/
+	return tpl.ExecuteWriter(ctx.(pongo2.Context), w)
 }
 
 // SetTemplateDir set the root path of templates.
