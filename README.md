@@ -1,22 +1,27 @@
 # Kwiscale addon to use Pongo2 template engine
 
-That addon can be used with [Kwiscale](https://github.com/kwiscale/framework) to use [Pongo2](https://github.com/flosch/pongo2) template engine.
+That addon can be used with [Kwiscale](https://github.com/kwiscale/framework) (please use gopkg.in url [http://gopkg.in/kwiscale/framework.v0] instead) to use [Pongo2](https://github.com/flosch/pongo2) template engine.
 
 # How to
+
+At this time, we're in alpha stage so please use "v0" that is the "master" version
 
 Install addon with
 
 ```
-go get github.com/kwiscale/template-pongo2
+go get gopkg.in/kwiscale/framework.v0
+go get gopkg.in/kwiscale/template-pongo2.v0
 ```
+
+It's important to use the same version for framework and template.
 
 Then in you application:
 
 ```go
 
 import (
-    "github.com/kwiscale/framework"
-    _ "github.com/kwiscale/template-pongo2"
+    "gopkg.in/kwiscale/framework.v1"
+    _ "gopkg.in/kwiscale/template-pongo2.v1"
 )
 
 ```
