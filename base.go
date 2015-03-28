@@ -29,6 +29,8 @@ func (p *PongoTemplateEngine) Render(w io.Writer, path string, ctx interface{}) 
 
 	// We try to keep the correct context structure
 	switch ctx := ctx.(type) {
+	case pongo2.Context:
+		pctx = ctx
 	case map[string]interface{}:
 		for k, v := range ctx {
 			pctx[k] = v
