@@ -25,8 +25,7 @@ type PongoTemplateEngine struct {
 func (p *PongoTemplateEngine) Render(w io.Writer, path string, ctx interface{}) error {
 	path = filepath.Join(p.tpldir, path)
 	tpl := pongo2.Must(pongo2.FromFile(path))
-
-	var pctx pongo2.Context
+	pctx := pongo2.Context{}
 
 	// We try to keep the correct context structure
 	switch ctx := ctx.(type) {
