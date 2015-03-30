@@ -61,3 +61,6 @@ func (p *PongoTemplateEngine) SetTemplateDir(path string) {
 	p.tpldir = t
 	log.Println("Pango2: template dir set to ", p.tpldir)
 }
+
+// ne need to set options
+func (p *PongoTemplateEngine) SetTemplateOptions(ops *kwiscale.TplOptions) {}
