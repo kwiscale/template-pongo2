@@ -63,4 +63,4 @@ func (p *PongoTemplateEngine) SetTemplateDir(path string) {
 }
 
 // ne need to set options
-func (p *PongoTemplateEngine) SetTemplateOptions(ops *kwiscale.TplOptions) {}
+func (p *PongoTemplateEngine) SetTemplateOptions(ops kwiscale.TplOptions) {}
