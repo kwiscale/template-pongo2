@@ -54,12 +54,10 @@ func (p *PongoTemplateEngine) Render(w io.Writer, path string, ctx interface{}) 
 // SetTemplateDir set the root path of templates.
 func (p *PongoTemplateEngine) SetTemplateDir(path string) {
 	t, err := filepath.Abs(path)
-
 	if err != nil {
-		log.Fatalln("Path not ok", err)
+		panic(err)
 	}
 	p.tpldir = t
-	log.Println("Pango2: template dir set to ", p.tpldir)
 }
 
 // ne need to set options
