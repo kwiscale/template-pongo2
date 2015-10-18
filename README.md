@@ -9,8 +9,8 @@ At this time, we're in alpha stage so please use "v0" that is the "master" versi
 Install addon with
 
 ```
-go get gopkg.in/kwiscale/framework.v0
-go get gopkg.in/kwiscale/template-pongo2.v0
+go get gopkg.in/kwiscale/framework.v1
+go get gopkg.in/kwiscale/template-pongo2.v1
 ```
 
 It's important to use the same version for framework and template.
@@ -20,8 +20,8 @@ Then in you application:
 ```go
 
 import (
-    "gopkg.in/kwiscale/framework.v0"
-    _ "gopkg.in/kwiscale/template-pongo2.v0"
+    "gopkg.in/kwiscale/framework.v1"
+    _ "gopkg.in/kwiscale/template-pongo2.v1"
 )
 
 ```

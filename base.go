@@ -6,9 +6,10 @@ import (
 	"log"
 	"path/filepath"
 
+	"gopkg.in/kwiscale/framework.v1"
+
 	"github.com/flosch/pongo2"
 	_ "github.com/flosch/pongo2-addons"
-	"gopkg.in/kwiscale/framework.v0"
 )
 
 // Init is used to register Pongo2 template engine to Kwiscale as name "pongo2".
